@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rh_personal,access.rh.personal,model_rh_personal,,1,1,1,1
+access_rh_position,access.rh.position,model_rh_position,,1,1,1,1
+access_rh_department,access.rh.department,model_rh_department,,1,1,1,1
+access_rh_formation,access.rh.formation,model_rh_formation,,1,1,1,1
+access_rh_secure,access.rh.secure,model_rh_secure,,1,1,1,1
+access_rh_interview,access.rh.interview,model_rh_interview,,1,1,1,1
+access_rh_vacancies,access.rh.vacancies,model_rh_vacancies,,1,1,1,1

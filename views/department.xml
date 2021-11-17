@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_department_tree" model="ir.ui.view">
+        <field name="name">rh.department.tree</field>
+        <field name="model">rh.department</field>
+        <field name="arch" type="xml">
+            <tree sample='1'>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_department_form" model="ir.ui.view">
+        <field name="name">rh.department.form</field>
+        <field name="model">rh.department</field>
+        <field name="arch" type="xml">
+            <form sample="1" string="Departamentos">
+                <sheet>
+                    <field name="name" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="action_deparment_list" model="ir.actions.act_window">
+        <field name="name">Departamentos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rh.department</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Department!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_department_list" parent="menu_personal_list" action="action_deparment_list" name="Departamentos" />
+</odoo>

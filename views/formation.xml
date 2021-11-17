@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_formation_tree" model="ir.ui.view">
+        <field name="name">rh.formation.tree</field>
+        <field name="model">rh.formation</field>
+        <field name="arch" type="xml">
+            <tree sample='1'>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_formation_form" model="ir.ui.view">
+        <field name="name">rh.formation.form</field>
+        <field name="model">rh.formation</field>
+        <field name="arch" type="xml">
+            <form sample="1" string="Formacion">
+                <sheet>
+                    <field name="name" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="action_formation_list" model="ir.actions.act_window">
+        <field name="name">Formacion</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rh.formation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Formation!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_formation_list" parent="menu_personal_list" action="action_formation_list" name="Formacion"/>
+</odoo>

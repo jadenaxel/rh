@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_interview_tree" model="ir.ui.view">
+        <field name="name">rh.interview.tree</field>
+        <field name="model">rh.interview</field>
+        <field name="arch" type="xml">
+            <tree sample='1'>
+                <header>
+                    <button name="action_done" string="Marcar como Hecho" type="object" class="btn-primary" />
+                </header>
+                <field name="name"/>
+                <field name="cedula" />
+                <field name='vacancies_type' />
+                <field name="dateTime"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_interview_form" model="ir.ui.view">
+        <field name="name">rh.interview.form</field>
+        <field name="model">rh.interview</field>
+        <field name="arch" type="xml">
+            <form sample="1" string="Entrevistas">
+                <header>
+                    <button id="button_confirm" states="draft" name="action_confirm" string="Confirmado" type="object" class="btn-primary"/>
+                    <button id="button_done" states="confirm" name="action_done" string="Marcar como Hecho" type="object" class="btn-primary"/>
+                    <button id="button_draft" states="cancel" name="action_draft" string="Marcar como Borrador" type="object" class="btn-primary"/>
+                    <button id="button_cancel" states="done,draft,confirm" name="action_cancel" string="Cancelar" type="object" class="btn-primary" />
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done,confirm" />
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="cedula" />
+                        <field name="vacancies_type" />
+                        <field name="dateTime"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="action_interview_list" model="ir.actions.act_window">
+        <field name="name">Entrevistas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rh.interview</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Interview!
+            </p>
+        </field>
+    </record>
+    
+    <menuitem id="menu_entrevistas_list" parent="menu_personal_list_root" name="Entrevistas" />
+
+    <menuitem id="menu_entrevistas_list_child" parent="menu_entrevistas_list" name="Entrevistas"  action="action_interview_list" />
+</odoo>
