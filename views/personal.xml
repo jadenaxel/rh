@@ -11,16 +11,22 @@
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <field name="portrai_image" widget="image" class="o_kanban_image_fill_left" />
+                            </div>
                             <div class="oe_kanban_details">
                                 <ul>
-                                    <li>
-                                        <field name="portrai_image" widget="image" class="o_kanban_image_fill_left" />
-                                    </li>
                                     <li>
                                         Nombre: <field name="name" />
                                      </li>
                                     <li>
                                         Apellido: <field name="last_name" />
+                                    </li>
+                                    <li>
+                                        Departamento: <field name="deparmtnet_name" />
+                                    </li>
+                                    <li>
+                                        Cargo: <field name="job_position_name" />
                                     </li>
                                 </ul>
                             </div>
@@ -62,15 +68,28 @@
                     <notebook>
                         <page string="Empleo">
                             <group>
-                                <field name="ocupational_status" />
-                                <field name="job_position_name" />
+                                <group>
+                                    <field name="ocupational_status" />
+                                    <field name="job_position_name" />
+                                </group>
+                                <group>
+                                    <field name="formation" />
+                                </group>
+                                <group>
+                                    <field name="deparmtnet_name" />
+                                    <field name="staff_type" />
+                                </group>
+                                <group>
+                                    <field name="salary" />
+                                    <field name="net_salary" />
+                                    <field name="gross_salary" />
+                                </group>
                             </group>
                             <group>
-                                <field name="formation" />
-                            </group>
-                            <group>
-                                <field name="deparmtnet_name" />
-                                <field name="staff_type" />
+                                <group>
+                                    <field name="exit_date" />
+                                    <field name="income_date" />
+                                </group>
                             </group>
                         </page>
                         <page string="Seguro">
@@ -98,10 +117,29 @@
                                 <field name="blood_type" />
                             </group>
                         </page>
-                        <page string="Otros">
+                        <page string="Informacion Personal">
                             <group>
-                                <field name="exit_date" />
-                                <field name="income_date" />
+                                <group>
+                                    <field name="mother_name" />
+                                    <field name="father_name" />
+                                </group>
+                                <group>
+                                    <field name="child_quantity" />
+                                </group>
+                            </group>
+                            <group>
+                                <group>
+                                    <field name="civil_status" />
+                                    <field name="couple_name" />
+                                </group>
+                                <group>
+                                    <field name="religion" />
+                                    <field name="ideology" />
+                                </group>
+                            </group>
+                            <group>
+                                <field name="address" />
+                                <field name="email" />
                             </group>
                         </page>
                     </notebook>

@@ -5,3 +5,7 @@ from . import formation
 from . import secure
 from . import interviews
 from . import vacancies
+from . import licences
+from . import vacation
+from . import suspensions
+from . import admonishments

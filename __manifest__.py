@@ -16,7 +16,11 @@
         'views/formation.xml',
         'views/secure.xml',
         'views/interviews.xml',
-        'views/vacancies.xml'
+        'views/vacancies.xml',
+        'views/licenses.xml',
+        'views/vacation.xml',
+        'views/suspensions.xml',
+        'views/admonishments.xml',
     ],
     'demo': [],
     'qweb': [],

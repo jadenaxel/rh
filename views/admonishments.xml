@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_admonishments_tree" model="ir.ui.view">
+        <field name="name">rh.admonishments.tree</field>
+        <field name="model">rh.admonishments</field>
+        <field name="arch" type="xml">
+            <tree sample='1'>
+                <field name="personal_name" />
+                <field name="start_date" />
+                <field name="enjoy_salaries" />
+                <field name="category" />
+                <field name="admonishments_comment" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_admonishments_form" model="ir.ui.view">
+        <field name="name">rh.admonishments.form</field>
+        <field name="model">rh.admonishments</field>
+        <field name="arch" type="xml">
+            <form sample="1" string="Suspenciones">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="personal_name" />
+                            <field name="start_date" />
+                        </group>
+                        <group>
+                            <field name="enjoy_salaries" />
+                        </group>
+                        <group>
+                            <field name="category" />
+                        </group>
+                        <group>
+                            <field name="admonishments_comment" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="action_admonishments_list" model="ir.actions.act_window">
+        <field name="name">Amonestaciones</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">rh.admonishments</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first admonishments!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_admonishments_list" parent="menu_permisos" action="action_admonishments_list" name="Amonestaciones"/>
+</odoo>

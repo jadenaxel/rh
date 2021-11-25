@@ -6,3 +6,7 @@ access_rh_formation,access.rh.formation,model_rh_formation,,1,1,1,1
 access_rh_secure,access.rh.secure,model_rh_secure,,1,1,1,1
 access_rh_interview,access.rh.interview,model_rh_interview,,1,1,1,1
 access_rh_vacancies,access.rh.vacancies,model_rh_vacancies,,1,1,1,1
+access_rh_licence,access.rh.licence,model_rh_licence,,1,1,1,1
+access_rh_vacation,access.rh.vacation,model_rh_vacation,,1,1,1,1
+access_rh_suspensions,access.rh.suspensions,model_rh_suspensions,,1,1,1,1
+access_rh_admonishments,access.rh.admonishments,model_rh_admonishments,,1,1,1,1

@@ -57,3 +57,29 @@ class Personal(models.Model):
     income_date = fields.Date(
         string='Fecha de ingreso: ', required=True, tracking=True)
     exit_date = fields.Date(string='Fecha de salida: ', tracking=True)
+    salary = fields.Float(string='Salario: ', tracking=True)
+    net_salary = fields.Float(string='Salario neto: ', tracking=True)
+    gross_salary = fields.Float(string='Salario bruto: ', tracking=True)
+    child_quantity = fields.Integer(
+        string='Cantidad de hijos: ', tracking=True)
+    mother_name = fields.Char(string='Nombre de la madre: ', tracking=True)
+    father_name = fields.Char(string='Nombre del padre: ', tracking=True)
+    civil_status = fields.Selection([
+        ('soltero', 'Soltero'),
+        ('casado', 'Casado'),
+        ('divorciado', 'Divorciado'),
+        ('viudo', 'Viudo')
+    ], string='Estado civil: ', tracking=True)
+    couple_name = fields.Char(string='Nombre de la pareja: ', tracking=True)
+    religion = fields.Selection([
+        ('catolico', 'Católico'),
+        ('cristiano', 'Cristiano'),
+        ('judio', 'Judio'),
+        ('musulman', 'Musulman'),
+        ('budista', 'Budista'),
+        ('hindu', 'Hindu'),
+        ('otro', 'Otro')
+    ], string='Religión: ', tracking=True)
+    ideology = fields.Char(string='Ideología: ', tracking=True)
+    address = fields.Char(string='Dirección: ', tracking=True)
+    email = fields.Char(string='Correo: ', tracking=True)
