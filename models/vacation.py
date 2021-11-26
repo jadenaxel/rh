@@ -11,5 +11,5 @@ class Vacation(models.Model):
     start_date = fields.Date(string='Fecha de inicio: ', required=True)
     end_date = fields.Date(string='Fecha de finalizacion: ', required=True)
     enjoy_salaries = fields.Boolean(
-        string='¿El colaborador puede disfrutar de los salarios?', default=False)
+        string='¿Disfrute de suelo?', default=False)
     vacation_comment = fields.Text(string='Comentario: ')

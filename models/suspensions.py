@@ -12,5 +12,5 @@ class Suspensions(models.Model):
     end_date = fields.Date(string='Fecha de finalizacion: ', required=True)
     suspensions_days = fields.Integer(string='Dias de suspension: ')
     enjoy_salaries = fields.Boolean(
-        string='¿El colaborador puede disfrutar de los salarios?', default=False)
+        string='¿Disfrute de suelo?', default=False)
     suspensions_comment = fields.Text(string='Comentario: ')

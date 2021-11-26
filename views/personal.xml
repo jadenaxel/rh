@@ -92,6 +92,20 @@
                                 </group>
                             </group>
                         </page>
+                        <page string="Permisos y otros">
+                            <group>
+                                <field name="license_quantity" /> 
+                            </group>
+                            <group>
+                                <field name="vacations" />
+                            </group>
+                            <group>
+                                <field name="suspensions" />
+                            </group>
+                            <group>
+                                <field name="admonishmets" />
+                            </group>
+                        </page>
                         <page string="Seguro">
                             <group>
                                 <field name="numberPhone" />

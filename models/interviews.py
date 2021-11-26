@@ -10,11 +10,12 @@ class Interview(models.Model):
     cedula = fields.Char(string='Cédula: ', required=True)
     vacancies_type = fields.Many2one(
         'rh.vacancies', string='Vacante: ', required=True)
-    dateTime = fields.Datetime(
-        string='Fecha y hora: ', required=True)
-
-    state = fields.Selection([('draft', 'Borrador'), ('confirm', 'Confirmado'), ('done', 'Completado'), (
-        'cancel', 'Cancelado')], default='draft', string='Estado', tracking=True)
+    resume_date = fields.Date(string='Fecha de entrega de curriculum: ')
+    pre_interview = fields.Datetime(string='Fecha de pre entrevista: ')
+    interview = fields.Datetime(string='Fecha de entrevista: ')
+    
+    state = fields.Selection([('draft', 'Borrador'), ('confirm', 'Confirmado'), (
+        'done', 'Completado'), ('cancel', 'Cancelado')], default='draft', string='Estado', tracking=True)
 
     def action_confirm(self):
         self.state = 'confirm'

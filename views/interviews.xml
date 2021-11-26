@@ -11,7 +11,9 @@
                 <field name="name"/>
                 <field name="cedula" />
                 <field name='vacancies_type' />
-                <field name="dateTime"/>
+                <field name="resume_date"/>
+                <field name="pre_interview"/>
+                <field name="interview"/>
             </tree>
         </field>
     </record>
@@ -33,7 +35,9 @@
                         <field name="name"/>
                         <field name="cedula" />
                         <field name="vacancies_type" />
-                        <field name="dateTime"/>
+                        <field name="resume_date"/>
+                        <field name="pre_interview"/>
+                        <field name="interview"/>
                     </group>
                 </sheet>
             </form>

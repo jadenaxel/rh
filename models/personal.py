@@ -83,3 +83,11 @@ class Personal(models.Model):
     ideology = fields.Char(string='Ideología: ', tracking=True)
     address = fields.Char(string='Dirección: ', tracking=True)
     email = fields.Char(string='Correo: ', tracking=True)
+    license_quantity = fields.One2many(
+        'rh.licence', 'personal_name', string='Licencias: ', tracking=True)
+    vacations = fields.One2many(
+        'rh.vacation', 'personal_name', string="Vacaciones: ", tracking=True)
+    suspensions = fields.One2many(
+        'rh.suspensions', 'personal_name', string='Suspensiones: ', tracking=True)
+    admonishmets = fields.One2many(
+        'rh.admonishments', 'personal_name', string="Amonestaciones")
