@@ -16,7 +16,9 @@
         <field name="arch" type="xml">
             <form sample="1" string="Seguros">
                 <sheet>
-                    <field name="name" />
+                    <group>
+                        <field name="name" />
+                    </group>
                 </sheet>
             </form>
         </field>

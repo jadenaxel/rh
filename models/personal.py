@@ -60,6 +60,7 @@ class Personal(models.Model):
     salary = fields.Float(string='Salario: ', tracking=True)
     net_salary = fields.Float(string='Salario neto: ', tracking=True)
     gross_salary = fields.Float(string='Salario bruto: ', tracking=True)
+    cooperative = fields.Boolean(string='Cooperativa: ', tracking=True)
     child_quantity = fields.Integer(
         string='Cantidad de hijos: ', tracking=True)
     mother_name = fields.Char(string='Nombre de la madre: ', tracking=True)

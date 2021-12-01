@@ -5,4 +5,4 @@ class Department(models.Model):
     _name = 'rh.department'
     _description = 'Department'
 
-    name = fields.Char(string='Name', required=True, tracking=True)
+    name = fields.Char(string='Departamento', required=True, tracking=True)
