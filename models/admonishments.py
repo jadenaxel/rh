@@ -12,5 +12,5 @@ class Admonishments(models.Model):
     enjoy_salaries = fields.Boolean(
         string='¿Disfrute de suelo?', default=False)
     category = fields.Selection(
-        [('verbal', 'Verbal'), ('escrita', 'Escrita'), ('tercer', 'Tercer grado')], string="")
+        [('verbal', 'Verbal'), ('escrita', 'Escrita'), ('tercer', 'Tercer grado')], string="Categoria")
     admonishments_comment = fields.Text(string='Comentario: ')
