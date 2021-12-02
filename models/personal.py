@@ -57,9 +57,8 @@ class Personal(models.Model):
     income_date = fields.Date(
         string='Fecha de ingreso: ', required=True, tracking=True)
     exit_date = fields.Date(string='Fecha de salida: ', tracking=True)
-    salary = fields.Float(string='Salario: ', tracking=True)
-    net_salary = fields.Float(string='Salario neto: ', tracking=True)
-    gross_salary = fields.Float(string='Salario bruto: ', tracking=True)
+    net_salary = fields.Float(string='Salario Neto: ', tracking=True)
+    gross_salary = fields.Float(string='Salario Bruto: ', tracking=True)
     cooperative = fields.Boolean(string='Cooperativa: ', tracking=True)
     child_quantity = fields.Integer(
         string='Cantidad de hijos: ', tracking=True)
